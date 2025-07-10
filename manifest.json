@@ -12,21 +12,20 @@
       "type": "image/png",
       "purpose": "any"
     },
-    {
-      "src": "moth-web-app-manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "apple-touch-icon.png",
+   {
+      "src": "moth-apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
-    {
-      "src": "favicon-96x96.png",
+  {
+      "src": "moth-favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
+    },
+    {
+      "src": "moth-favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     },
     {
       "src": "favicon.ico",
