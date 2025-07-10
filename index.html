@@ -88,7 +88,6 @@
     let deferredPrompt;
 
     window.addEventListener('beforeinstallprompt', (e) => {
-      console.log('📦 beforeinstallprompt fired'); // Debug
       e.preventDefault();
       deferredPrompt = e;
       document.getElementById('installBanner').style.display = 'block';
