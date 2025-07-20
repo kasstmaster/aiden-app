@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#111111">
 
 <style>
-  body {
+body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #fff;
@@ -28,50 +28,48 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    cursor: pointer; /* Makes it clear it's clickable */
-  }
+    overflow: hidden; /* ✅ Prevents scroll bar */
+    cursor: pointer;
+}
 
-  #overlay {
+#overlay {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
     text-align: center;
-    padding: 40px;
-  }
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+    padding: 0; /* ✅ Removed padding to avoid overflow */
+}
 
-  #overlay img.icon {
+#overlay img.icon {
     display: block;
-    margin: 0 auto 16px;
-    max-width: 320px;
+    margin: 16px auto;
+    max-width: 250px; /* ✅ Slightly smaller for small screens */
     width: 100%;
     height: auto;
-  }
+}
 
-  #overlay h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
-      font-family: 'Playfair Display', serif; /* Apply the font */
-      font-weight: 400; /* Use normal weight for elegance */
-  }
+#overlay h1 {
+    font-size: 30px;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
 
-  #overlay h2 {
+#overlay h2 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 0;
     font-weight: normal;
-    animation: blinkText 1.2s infinite; /* Apply blinking */
-  }
-  
-  @keyframes blinkText {
-      0%, 49% {
-          opacity: 1;
-      }
-      50%, 100% {
-          opacity: 0;
-      }
-  }
+    animation: blinkText 1.2s infinite;
+}
+
+@keyframes blinkText {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
 
   #overlay p {
     font-size: 16px;
