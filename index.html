@@ -41,13 +41,13 @@ body {
     width: 100%;
     max-width: 90%;
     box-sizing: border-box;
-    padding: 0; /* ✅ Removed padding to avoid overflow */
+    padding: 0;
 }
 
 #overlay img.icon {
     display: block;
     margin: 16px auto;
-    max-width: 250px; /* ✅ Slightly smaller for small screens */
+    max-width: 250px;
     width: 100%;
     height: auto;
 }
@@ -71,17 +71,30 @@ body {
     50%, 100% { opacity: 0; }
 }
 
-  #overlay p {
+#overlay p {
     font-size: 16px;
     color: #bbb;
-  }
+}
 </style>
 </head>
-<body onclick="window.location.href='https://script.google.com/macros/s/AKfycbwICSTqeC1SQGvxoVbXkXGf2sc-HVH-dxBX5C4W2A9CKul9VnQJx5JOm15mexuhdZ9x/exec'" style="margin:0; padding:0;">
+<body style="margin:0; padding:0;">
   <div id="overlay">
     <h1>Aiden</h1>
     <img class="icon" src="/moth-web-app-manifest-192x192.png" alt="App Icon">
-    <h2>Tap Anywhere</h1>
+    <h2 id="tap-text">Tap Anywhere</h2>
   </div>
+
+<script>
+  document.body.addEventListener('click', function() {
+    // Change text to "Loading..."
+    const tapText = document.getElementById('tap-text');
+    tapText.textContent = 'Loading...';
+    tapText.style.animation = 'none'; // Stop blinking effect
+    // Redirect after small delay
+    setTimeout(() => {
+      window.location.href = 'https://script.google.com/macros/s/AKfycbwICSTqeC1SQGvxoVbXkXGf2sc-HVH-dxBX5C4W2A9CKul9VnQJx5JOm15mexuhdZ9x/exec';
+    }, 300); // 0.3 second delay for feedback
+  });
+</script>
 </body>
 </html>
